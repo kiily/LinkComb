@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HexagonGridComponent } from './hexagon-grid/hexagon-grid.component';
+import { HexagonComponent } from './hexagon/hexagon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HexagonGridComponent
+    HexagonGridComponent,
+    HexagonComponent
   ],
   imports: [
     BrowserModule
