@@ -13,7 +13,7 @@ export class HexagonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.link);
+    
   }
 
 }
