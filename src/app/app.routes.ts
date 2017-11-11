@@ -1,6 +1,6 @@
-import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
-import { LinksPageComponent } from './links-page/links-page.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { LinksPageComponent } from './pages/links-page/links-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { Routes } from '@angular/router';
 
 

@@ -1,30 +1,57 @@
+$breakpoints : (
+  xs: "(max-width : 480px)",
+  sm: "(max-width : 768px) and (min-width: 481px)",
+  md: "(max-width : 1024px) and (min-width: 769px)",
+  lg: "(max-width : 1025px)"
+);
+
+
+
 
 /* CSS credits (CSS based on): - https://github.com/web-tiki/responsive-grid-of-hexagons */
 #hex-grid {
+  //enables elements to wrap around each other and centers them
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    width: 90%;
-    font-family:  'Raleway', sans-serif;
-    font-size: 15px;
-    list-style-type: none;
+    width: 95%;
+    // font-family:  'Raleway', sans-serif;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 0.5em;
+
+    .hex {
+      //relative positions the 
+        position: relative;
+        visibility:hidden;
+        outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+        
+      }
+
+      .hex::after{
+        content:'';
+        display:flex;
+        padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+      }
 }
 
-.hex {
-    position: relative;
-    visibility:hidden;
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-    
-  }
-  .hex::after{
-    content:'';
-    display:block;
-    padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
-  }
+//Custom media query
+// @mixin media($queryString){
+//   @media #{$queryString} {
+//     @content;
+//   }
+// }
+
+// @mixin renderMediaQueries($breakpoints){
+//   @each $key, $breakpoint in $breakpoints{
+//     @include media($breakpoint);
+//   }
+// }
+
 
   /*** HEXAGON SIZING AND NUMBER OF HEXAGONS PER ROW ***/
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION for different screen sizes
+Credits to https://github.com/web-tiki/responsive-grid-of-hexagons for the inspiration and 
+calculations ***/
+@media(min-width:1201px) { /* <- 5-4  hexagons per row */
   #hexGrid{
     padding-bottom: 4.4%
   }

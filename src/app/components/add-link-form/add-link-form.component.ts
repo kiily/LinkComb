@@ -1,7 +1,7 @@
-import { LinksService } from '../services/links.service';
+import { LinksService } from '../../services/links.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Link } from "../models/link.model";
+import { Link } from "../../models/link.model";
 
 @Component({
   selector: 'app-add-link-form',

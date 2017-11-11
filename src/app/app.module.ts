@@ -6,13 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HexagonGridComponent } from './hexagon-grid/hexagon-grid.component';
-import { HexagonComponent } from './hexagon/hexagon.component';
-import { AddLinkFormComponent } from './add-link-form/add-link-form.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LinksPageComponent } from './links-page/links-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
+import { HexagonGridComponent } from './components/hexagon-grid/hexagon-grid.component';
+import { HexagonComponent } from './components/hexagon/hexagon.component';
+import { AddLinkFormComponent } from './components/add-link-form/add-link-form.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { LinksPageComponent } from './pages/links-page/links-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 
 @NgModule({
   declarations: [
