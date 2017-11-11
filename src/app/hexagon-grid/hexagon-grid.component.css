@@ -1,6 +1,6 @@
 
 /* CSS credits (CSS based on): - https://github.com/web-tiki/responsive-grid-of-hexagons */
-.hex-grid {
+#hex-grid {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
