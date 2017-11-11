@@ -12,6 +12,7 @@ import { AddLinkFormComponent } from './add-link-form/add-link-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LinksPageComponent } from './links-page/links-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AddLinkFormComponent,
     LandingPageComponent,
     LinksPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    FavoritesPageComponent
   ],
   imports: [
     BrowserModule, 
