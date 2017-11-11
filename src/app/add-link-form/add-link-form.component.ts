@@ -6,7 +6,7 @@ import { Link } from "../models/link.model";
 @Component({
   selector: 'app-add-link-form',
   templateUrl: './add-link-form.component.html',
-  styleUrls: ['./add-link-form.component.css']
+  styleUrls: ['./add-link-form.component.scss']
 })
 export class AddLinkFormComponent implements OnInit {
 
