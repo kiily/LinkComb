@@ -30,7 +30,13 @@ export class AddLinkFormComponent implements OnInit {
     let url = this.addLinkForm.controls.url.value;
     let imageUrl = this.addLinkForm.controls.imageUrl.value;
 
-    let link = new Link(title, subtitle, url, imageUrl);
+    let link : Link = {
+      title:title,
+      subtitle: subtitle,
+      url: url,
+      imageUrl: imageUrl,
+      count: 0
+    } 
     
     this.linksService.addLink(link);
   }
