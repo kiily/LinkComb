@@ -107,7 +107,7 @@ $animation-color : rgba(0, 128, 128, 0.8);
   /*** HEXAGON HOVER EFFECTS  ***/
   .hex-link:hover h1, .hex-link:focus h1,
   .hex-link:hover p, .hex-link:focus p,
-  .hex-edit:hover a, .hex-edit:focus a{
+  {
     -webkit-transform:translate3d(0,0,0);
         -ms-transform:translate3d(0,0,0);
             transform:translate3d(0,0,0);
