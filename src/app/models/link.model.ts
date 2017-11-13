@@ -3,7 +3,7 @@ export interface Link{
         title : string;
         subtitle : string;
         url : string;
-        imageUrl : string;
+        imageUrl? : string;
         count : number;
 
 }

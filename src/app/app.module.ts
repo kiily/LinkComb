@@ -16,6 +16,8 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AddLinkAccordionComponent } from './components/add-link-accordion/add-link-accordion.component';
+import { UpdateLinkFormComponent } from './components/update-link-form/update-link-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     LandingPageComponent,
     LinksPageComponent,
     NavbarComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    AddLinkAccordionComponent,
+    UpdateLinkFormComponent,
   ],
   imports: [
     BrowserModule, 
@@ -34,7 +38,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     //enable offline persistence of data
-    AngularFirestoreModule.enablePersistence(),
+    // AngularFirestoreModule.enablePersistence(),
+    AngularFirestoreModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
