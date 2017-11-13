@@ -10,10 +10,11 @@ export class LinksService {
   links : Observable<Link[]>; 
   
   //get an individual link document for delete and update methods
+  linkDoc : AngularFirestoreDocument<Link>;
+
   constructor(private afs : AngularFirestore) { 
-    //fetch the links
-    // this.linksCollection = this.afs.collection('links', ref => ref.orderBy('count', 'desc'));
-    this.linksCollection = this.afs.collection('links');
+    //fetch the links; alphabetical order for all links
+    this.linksCollection = this.afs.collection('links', ref => ref.orderBy('title', 'asc'));
 
     //to retrieve the id for each item, need to use snapshotChanges() and 
     //then map the id to access the entire object
@@ -34,15 +35,23 @@ export class LinksService {
   }
 
   addLink(link : Link){
- 
+    this.linksCollection.add(link).catch(error => {
+      console.log(error);
+    });
   }
 
-  deleteLink(){
-
+  deleteLink(link : Link){
+    //set the doc to specified id
+    this.linkDoc = this.afs.doc('/links/'+link.id);
+    //remove the doc from the collection
+    this.linkDoc.delete();
   }
 
-  editLink(){
-
+  updateLink(link : Link){
+     //set the doc to specified id
+     this.linkDoc = this.afs.doc('/links/'+link.id);
+     //update the doc 
+     this.linkDoc.update(link);
   }
 
 }
