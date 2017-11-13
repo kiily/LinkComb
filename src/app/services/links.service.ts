@@ -13,9 +13,8 @@ export class LinksService {
   linkDoc : AngularFirestoreDocument<Link>;
 
   constructor(private afs : AngularFirestore) { 
-    //fetch the links
-    // this.linksCollection = this.afs.collection('links', ref => ref.orderBy('count', 'desc'));
-    this.linksCollection = this.afs.collection('links');
+    //fetch the links; alphabetical order for all links
+    this.linksCollection = this.afs.collection('links', ref => ref.orderBy('title', 'asc'));
 
     //to retrieve the id for each item, need to use snapshotChanges() and 
     //then map the id to access the entire object

@@ -1,3 +1,5 @@
+import { LinksService } from '../../services/links.service';
+import { Link } from './../../models/link.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesPageComponent implements OnInit {
 
-  constructor() { }
+  links : Link[];
+  
+  constructor(private linksService : LinksService) { }
 
   ngOnInit() {
+    this.linksService.getLinks().subscribe( links => {
+      this.links = links;
+    } );
   }
 
 }

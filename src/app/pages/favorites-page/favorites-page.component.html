@@ -1,12 +1,18 @@
 <app-navbar></app-navbar>
 
 <br><br><br><br>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <app-hexagon-grid></app-hexagon-grid>
-      
+        <div *ngIf="links?.length > 0; else noLinks">
+      <app-hexagon-grid [links]="links"></app-hexagon-grid>
+      </div>
+            
     </div>
   </div>
 </div>
 
+<ng-template #noLinks>
+    <hr>
+    <h4>You currently have no Links</h4>
+  </ng-template>

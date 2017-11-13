@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+
+$green-color : #44C3AA;
+
+
+html, body{
+    height:100%;
+    width: 100%;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+
+.grid-container {
+    border: 1px solid $green-color;
+    padding-bottom: 50px;
+}

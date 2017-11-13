@@ -1,0 +1,52 @@
+
+<div class="container accordion-container">
+  <div class="row align-items-center">
+    <div class="col-12">
+      <div id="accordion" role="tablist">
+    <!-- Fade is an animation class to fade in; show specifies that this is shown when pages loads -->
+    <div class="card">
+        <!-- part of accordion -->
+        <div class="card-header" role="tab" id="add-link-head">
+            <!-- part of accordion -->
+            <!-- Create Accordion structure-->
+            <h3 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordion" href="#add-link">Add a new link</a>
+            </h3>
+        </div>
+
+        <div role="tabpanel" class="collapse" id="add-link">
+            <div class="card-block">
+
+              <app-add-link-form></app-add-link-form>
+    
+            </div>
+
+        </div>
+    </div>
+    <div class="card">
+        <!-- part of accordion -->
+        <div class="card-header" role="tab" id="edit-link-head">
+            <!-- part of accordion -->
+            <!-- Create Accordion structure-->
+            <h3 class="mb-0">
+                <a data-toggle="collapse" data-parent="#accordion" href="#edit-link">Edit link</a>
+            </h3>
+        </div>
+
+        <div role="tabpanel" class="collapse" id="edit-link">
+            <div class="card-block">
+              <div *ngIf="editLinkSelected; else noLink">
+                  <app-add-link-form></app-add-link-form>
+              </div>
+             <ng-template #noLink>
+               <h2>Please select a link tto edit</h2>
+             </ng-template>
+    
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+</div>

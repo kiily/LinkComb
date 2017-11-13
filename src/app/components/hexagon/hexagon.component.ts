@@ -16,4 +16,8 @@ export class HexagonComponent implements OnInit {
     
   }
 
+  editLink(link : Link){
+    console.log(link);
+  }
+
 }

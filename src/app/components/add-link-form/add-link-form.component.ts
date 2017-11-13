@@ -39,6 +39,7 @@ export class AddLinkFormComponent implements OnInit {
     } 
     
     this.linksService.addLink(link);
+    this.addLinkForm.reset();
   }
 
 }

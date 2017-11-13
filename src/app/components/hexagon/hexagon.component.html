@@ -1,8 +1,10 @@
 <!-- This class is animated into the hexagon in the grid -->
 <div class="hex-in">
   <a class="hex-link" [href]="link.url" target="_blank">
-    <img [src]="link.imageUrl" alt="link" />
+    <img [src]="link.imageUrl" alt="link.title" />
    <h1>{{link.title}}</h1>
-   <p>{{link.subtitle}}</p>
+   <p>{{link.subtitle}}</p> 
  </a>
+
+ <div (click)="editLink(link)" class="hex-edit"> <span  class="fa fa-pencil"></span></div>
 </div>
