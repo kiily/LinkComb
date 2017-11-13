@@ -1,13 +1,9 @@
-export class Link{
+export interface Link{
+        id? : string;
         title : string;
         subtitle : string;
         url : string;
         imageUrl : string;
+        count : number;
 
-        constructor(title : string, subtitle : string, url : string, imageUrl : string){
-            this.title = title;
-            this.subtitle = subtitle;
-            this.url = url;
-            this.imageUrl = imageUrl; 
-        }
 }

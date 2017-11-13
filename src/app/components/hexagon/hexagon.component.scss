@@ -1,14 +1,36 @@
+$animation-color : rgba(0, 128, 128, 0.8);
+//this class styles the part of the hexagon that fades in, it is created with a rectangle that is then
+//rotated to the desired position with transforms
 .hex-in{
     position: absolute;
-    width:96%;
-    padding-bottom: 110.851%; /* =  width / sin(60) */
-    margin:0 2%;
+    width:98%;
+    padding-bottom: 109.696%; /* =  width / sin(60) - this is essential for proper shape */
     overflow: hidden;
-    visibility: hidden;
+    // visibility: hidden;
     outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
     -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
         -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
             transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+
+    img{
+        left: -100%;
+        right: -100%;
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    h1, p{
+        width: 100%;
+        padding: 5%; 
+        margin: 0;
+        box-sizing:border-box;
+        background-color: $animation-color ;
+        font-weight: 300;
+        -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+                transition:          transform .2s ease-out, opacity .3s ease-out;
+    }
+
 }
 
 .hex-in * {
@@ -17,12 +39,14 @@
     outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
   }
 
+  //This is the link inside the hex-in div
   .hex-link {
-    display:block;
+    // display:block;
     width: 100%;
     height: 100%;
     text-align: center;
     color: #fff;
+    //hide image overflow
     overflow: hidden;
     -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
         -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
@@ -30,22 +54,12 @@
 }
 
 /*** HEXAGON CONTENT ***/
-.hex-in img {
-    left: -100%;
-    right: -100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-    -webkit-transform: rotate3d(0,0,0,0deg);
-        -ms-transform: rotate3d(0,0,0,0deg);
-            transform: rotate3d(0,0,0,0deg);
-  }
-  
   .hex-in h1, .hex-in p {
     width: 100%;
     padding: 5%; 
     margin: 0;
     box-sizing:border-box;
+    
     background-color: rgba(0, 128, 128, 0.8);
     font-weight: 300;
     -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
